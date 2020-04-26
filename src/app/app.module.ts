@@ -6,13 +6,49 @@ import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './register/register.component';
 import { from } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
+import { SocietyComponent } from './society/society.component';
+import { ArticleComponent } from './article/article.component';
+import { SecurityComponent } from './register/security/security.component';
+import { SuggestionComponent } from './article/suggestion/suggestion.component';
+import { PollresultComponent } from './article/suggestion/pollresult/pollresult.component';
+import { CategoryComponent } from './category/category.component';
+import { MemberComponent } from './register/member/member.component';
+import { VillaMemberComponent } from './register/villa-member/villa-member.component';
+import { ApartmentComponent } from './apartment/apartment.component';
+import { FloorComponent } from './apartment/floor/floor.component';
+import { HomeComponent } from './apartment/floor/home/home.component';
+import { DeliveryComponent } from './apartment/floor/home/delivery/delivery.component';
+import { GatedCommunityComponent } from './gated-community/gated-community.component';
+import { HomeVillaComponent } from './gatedCommunity/home-villa/home-villa.component';
+import { VillaDeliveryComponent } from './gatedCommunity/homeVilla/villa-delivery/villa-delivery.component';
+import { GroupOfApartmentsComponent } from './group-of-apartments/group-of-apartments.component';
+import { ApartmentsComponent } from './groupOfApartments/apartments/apartments.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     RegisterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SocietyComponent,
+    ArticleComponent,
+    SecurityComponent,
+    SuggestionComponent,
+    PollresultComponent,
+    CategoryComponent,
+    MemberComponent,
+    VillaMemberComponent,
+    ApartmentComponent,
+    FloorComponent,
+    HomeComponent,
+    DeliveryComponent,
+    GatedCommunityComponent,
+    HomeVillaComponent,
+    VillaDeliveryComponent,
+    GroupOfApartmentsComponent,
+    ApartmentsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
