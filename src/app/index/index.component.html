@@ -1,0 +1,10 @@
+<h1>Index Component</h1>
+<p>{{getWelcomeMessage()}}</p>
+<button class="button is-info" [disabled]="!showButton" (click)="onButtonClick()">Info</button>
+<br>
+<br>
+<p>{{showButton}}</p>
+<br>
+<label for="Name">Name:</label>
+<input type="text" [(ngModel)]="name">
+<p [ngStyle]="{backgroundColor: displayColor()}" [ngClass]="{green: name==='Kowshik'}">{{name}}</p>
