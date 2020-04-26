@@ -19,10 +19,10 @@ import { FloorComponent } from './apartment/floor/floor.component';
 import { HomeComponent } from './apartment/floor/home/home.component';
 import { DeliveryComponent } from './apartment/floor/home/delivery/delivery.component';
 import { GatedCommunityComponent } from './gated-community/gated-community.component';
-import { HomeVillaComponent } from './gatedCommunity/home-villa/home-villa.component';
-import { VillaDeliveryComponent } from './gatedCommunity/homeVilla/villa-delivery/villa-delivery.component';
+import { HomeVillaComponent } from './gated-community/home-villa/home-villa.component';
+import { VillaDeliveryComponent } from './gated-community/home-villa/villa-delivery/villa-delivery.component';
 import { GroupOfApartmentsComponent } from './group-of-apartments/group-of-apartments.component';
-import { ApartmentsComponent } from './groupOfApartments/apartments/apartments.component';
+import { ApartmentsComponent } from './group-of-apartments/apartments/apartments.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
