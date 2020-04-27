@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { IndexComponent } from './index/index.component';
 import { RegisterComponent } from './register/register.component';
-import { from } from 'rxjs';
 import { HeaderComponent } from './header/header.component';
 import { SocietyComponent } from './society/society.component';
 import { ArticleComponent } from './article/article.component';
@@ -24,6 +23,7 @@ import { VillaDeliveryComponent } from './gated-community/home-villa/villa-deliv
 import { GroupOfApartmentsComponent } from './group-of-apartments/group-of-apartments.component';
 import { ApartmentsComponent } from './group-of-apartments/apartments/apartments.component';
 import { FooterComponent } from './footer/footer.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,8 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
