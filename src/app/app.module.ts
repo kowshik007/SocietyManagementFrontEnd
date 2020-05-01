@@ -24,6 +24,7 @@ import { GroupOfApartmentsComponent } from './group-of-apartments/group-of-apart
 import { ApartmentsComponent } from './group-of-apartments/apartments/apartments.component';
 import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CreateSocietyComponent } from './society/create-society/create-society.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {HttpClientModule} from '@angular/common/http';
     VillaDeliveryComponent,
     GroupOfApartmentsComponent,
     ApartmentsComponent,
-    FooterComponent
+    FooterComponent,
+    CreateSocietyComponent
   ],
   imports: [
     BrowserModule,

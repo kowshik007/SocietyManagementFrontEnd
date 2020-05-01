@@ -1,0 +1,18 @@
+#SM_Index{
+    position: absolute;
+}
+.welcome-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+}
+#welcome-header{
+    font-size: 4em;
+    color: rgb(238, 8, 77);
+}
+#sub-header{
+    font-size: 2em;
+    color: rgb(204, 114, 54);
+}

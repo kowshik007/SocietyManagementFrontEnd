@@ -1,9 +1,13 @@
 <div class="container is-fluid">
+    <div class="columns">
+        <div class="notification" *ngIf="error">
+            {{error}}
+        </div>
+    </div>
     <div class="columns" *ngFor="let society of socities">
         <div class="column is-four-fifths">
             {{society.name}}
         </div>
-
         <div class="column">
           <button type="submit" class="button is-primary">Edit</button>
         </div>
@@ -11,22 +15,4 @@
             <button type="submit" class="button is-danger">Delete</button>
         </div>
       </div>
-    <form #postForm="ngForm" (ngSubmit)="onCreateSociety(postForm.value)">
-        <div class="field">
-            <div class="control">
-                <label for="name">Name</label>
-                <input type="text" class="input is-primary" name="name" [(ngModel)]="name">
-            </div>
-        </div>
-        <div class="field">
-            <div class="control">
-                <label for="status">Status</label>
-                <input type="number" class="input is-primary" name="status" [(ngModel)]="status">
-            </div>
-        </div>
-        <input class="button is-link need-space" type="submit" value="New Society">
-        <input class="button is-danger need-space" type="reset" value="Reset input">
-        <br>
-        <input type="button need-space" class="button" value="GetRecords" (click)="fetchSocieties()">
-    </form>
 </div>
