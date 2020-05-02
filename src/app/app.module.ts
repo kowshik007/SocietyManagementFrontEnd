@@ -25,6 +25,7 @@ import { ApartmentsComponent } from './group-of-apartments/apartments/apartments
 import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CreateSocietyComponent } from './society/create-society/create-society.component';
+import { DocumentsComponent } from './documents/documents.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { CreateSocietyComponent } from './society/create-society/create-society.
     GroupOfApartmentsComponent,
     ApartmentsComponent,
     FooterComponent,
-    CreateSocietyComponent
+    CreateSocietyComponent,
+    DocumentsComponent
   ],
   imports: [
     BrowserModule,
