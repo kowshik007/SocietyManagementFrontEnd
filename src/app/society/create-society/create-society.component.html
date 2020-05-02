@@ -1,16 +1,37 @@
-<form #postForm="ngForm" (ngSubmit)="onCreateSociety(postForm.value)">
-    <div class="field">
-        <div class="control">
-            <label for="name">Name</label>
-            <input type="text" class="input is-primary" name="name" [(ngModel)]="name">
+<div class="container is-fluid">
+    <form #postForm="ngForm" (ngSubmit)="onCreateSociety(postForm.value)">
+        <div class="field">
+            <div class="control">
+                <label for="name">Name</label>
+                <input type="text" class="input is-primary" name="name" [(ngModel)]="name">
+            </div>
         </div>
-    </div>
-    <div class="field">
-        <div class="control">
-            <label for="status">Status</label>
-            <input type="number" class="input is-primary" name="status" [(ngModel)]="status">
+        <div class="field">
+            <div class="control">
+                <label for="zipCode">ZipCode</label>
+                <input type="number" class="input is-primary" name="pincode" id="pincode" [(ngModel)]="zipCode">
+            </div>
         </div>
-    </div>
-    <input class="button is-link need-space" type="submit" value="New Society">
-    <input class="button is-danger need-space" type="reset" value="Reset input">
-</form>
+        <input class="button is-link" (click)="fetchZipCodeDetails()" type="button" value="FetchDetails"><br><br>
+        <!-- <div class="fetch" *ngIf="displayZipCodeList">
+            <div class="field">
+                <div class="control">
+                    <label for="officename">officename</label>
+                    <input type="text" class="input is-primary" name="officename" id="officename" [(ngModel)]="zipCodeList.records[0].officename">
+                </div>
+            </div>
+        </div> -->
+        <div class="field" *ngIf="displayZipCodeList">
+            <div class="control">
+              <label for="officename">PostOfficeName</label><br>
+              <div class="select is-primary">
+                <select name="officeName" id="officeName" [(ngModel)]="officeName">
+                  <option *ngFor="let record of zipCodeList.records">{{record.officename}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        <input class="button is-link need-space" type="submit" value="New Society">
+        <input class="button is-danger need-space" type="reset" value="Reset input">
+    </form>
+</div>

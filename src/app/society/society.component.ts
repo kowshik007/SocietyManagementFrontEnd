@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Society } from './society.model';
-import { map } from 'rxjs/operators';
+import { Society } from '../model/society.model';
 import { SocietyService } from './society.service';
 
 @Component({
@@ -19,13 +18,12 @@ export class SocietyComponent implements OnInit {
   
   ngOnInit() {
     this.societyService.fetchSocieties().subscribe(
-      socities=>{
-          this.socities=socities;
-      },
-      error =>{
-        this.error=error.message;
-      }
-  );
+        socities=>{
+            this.socities=socities;
+        },
+        error =>{
+          this.error=error.message;
+        }
+    );
   }
-
 }
