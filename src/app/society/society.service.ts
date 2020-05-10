@@ -6,7 +6,7 @@ import { ZipCode } from '../model/zipcode.model';
 @Injectable({providedIn:'root'})
 export class SocietyService{
     constructor(private http:HttpClient){}
-    token: string='ce3ee27c-9b39-4a7f-848e-e1149ac9f72b';
+    token: string='811fa9d9-1106-4116-b7ae-fb0ae3e8d4d7';
     zipCode: ZipCode;
     createAndStoreSociety(name: string,pincode: number,officeName: string){
         const postData: Society = {name:name,pincode:pincode,officeName:officeName}

@@ -26,6 +26,9 @@ import { FooterComponent } from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CreateSocietyComponent } from './society/create-society/create-society.component';
 import { DocumentsComponent } from './documents/documents.component';
+import { SocietyDetailsComponent } from './society/society-details/society-details.component';
+import { NeedSpaceDirective } from './customDirective/need-space.directive';
+import { NavbarDropDownDirective } from './customDirective/navbar-drop-down.directive';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { DocumentsComponent } from './documents/documents.component';
     ApartmentsComponent,
     FooterComponent,
     CreateSocietyComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    SocietyDetailsComponent,
+    NeedSpaceDirective,
+    NavbarDropDownDirective
   ],
   imports: [
     BrowserModule,

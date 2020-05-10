@@ -4,15 +4,6 @@
             {{error}}
         </div>
     </div>
-    <div class="columns" *ngFor="let society of socities">
-        <div class="column is-four-fifths">
-            {{society.name}}
-        </div>
-        <div class="column">
-          <button type="submit" class="button is-primary">Edit</button>
-        </div>
-        <div class="column">
-            <button type="submit" class="button is-danger">Delete</button>
-        </div>
-      </div>
+    <app-create-society (onCreateSocietyEvent)="onCreateSocietyEvent($event)"></app-create-society>
+    <app-society-details *ngFor="let society of socities" [society]="society"></app-society-details>
 </div>

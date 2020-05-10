@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter, Output } from '@angular/core';
 import { Society } from '../../model/society.model';
 import { SocietyService } from '../society.service';
 import { ZipCode } from 'src/app/model/zipcode.model';
@@ -15,16 +15,16 @@ export class CreateSocietyComponent implements OnInit {
   error:string;
   displayZipCodeList: boolean=false;
   zipCodeList: ZipCode;
+  @Output('onCreateSocietyEvent') onCreateSocietyEvent=new EventEmitter<Society>();
   constructor(private societyService: SocietyService) { }
 
   ngOnInit() {
   }
   onCreateSociety(postData: Society){
-    console.log(postData)
     this.societyService.createAndStoreSociety(postData.name,postData.pincode,postData.officeName).subscribe(
       responseData=>{
           this.createPostResult=responseData;
-          console.log(this.createPostResult.createdTimestamp)
+          this.onCreateSocietyEvent.emit(this.createPostResult);
       }
     );
   }

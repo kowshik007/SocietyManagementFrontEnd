@@ -10,11 +10,6 @@ import { SocietyService } from './society.service';
 })
 export class SocietyComponent implements OnInit {
   constructor(private http: HttpClient,private societyService: SocietyService) { }
-  name:string="";
-  status:number=0;
-  socities: Society[];
-  isLoading: boolean=false;
-  error=null;  
   
   ngOnInit() {
     this.societyService.fetchSocieties().subscribe(
@@ -25,5 +20,15 @@ export class SocietyComponent implements OnInit {
           this.error=error.message;
         }
     );
+  }
+  
+  name:string="";
+  status:number=0;
+  socities: Society[];
+  isLoading: boolean=false;
+  error=null;
+  onCreateSocietyEvent(society: Society){
+    console.log(society)
+    this.socities.push(society);
   }
 }
