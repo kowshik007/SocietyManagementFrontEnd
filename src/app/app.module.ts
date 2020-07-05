@@ -29,6 +29,10 @@ import { DocumentsComponent } from './documents/documents.component';
 import { SocietyDetailsComponent } from './society/society-details/society-details.component';
 import { NeedSpaceDirective } from './customDirective/need-space.directive';
 import { NavbarDropDownDirective } from './customDirective/navbar-drop-down.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { SocietyListComponent } from './society/society-list/society-list.component';
+import { SocietyEditComponent } from './society/society-edit/society-edit.component';
+
 
 @NgModule({
   declarations: [
@@ -58,10 +62,13 @@ import { NavbarDropDownDirective } from './customDirective/navbar-drop-down.dire
     DocumentsComponent,
     SocietyDetailsComponent,
     NeedSpaceDirective,
-    NavbarDropDownDirective
+    NavbarDropDownDirective,
+    SocietyListComponent,
+    SocietyEditComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule,
     HttpClientModule
   ],

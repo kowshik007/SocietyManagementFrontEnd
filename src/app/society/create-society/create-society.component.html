@@ -32,6 +32,6 @@
             </div>
           </div>
         <input class="button is-link" appNeedSpace [marginRight]="'16'" type="submit" value="New Society">
-        <input class="button is-danger" appNeedSpace [marginRight]="'16'" type="reset" value="Reset input">
+        <input class="button is-danger" appNeedSpace [marginRight]="'16'" (click)="resetInputs()" value="Reset input">
     </form>
 </div>

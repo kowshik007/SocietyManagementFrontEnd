@@ -1,4 +1,4 @@
-import { Directive, Output, HostListener, AfterViewInit,EventEmitter, Input, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, Output, HostListener, AfterViewInit,EventEmitter, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[appNavbarDropDown]'

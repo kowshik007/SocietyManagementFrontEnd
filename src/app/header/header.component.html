@@ -1,6 +1,6 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="http://localhost:4200">
+      <a class="navbar-item" routerLink="/">
         <img src="assets\images\SM_Logo.png" width="112" height="28">
       </a>
   
@@ -13,11 +13,11 @@
   
     <div id="navbarBasicExample" class="navbar-menu" #addDropDownActiveClass>
       <div class="navbar-start">
-        <a class="navbar-item" (click)="onSelect('home')">
+        <a class="navbar-item" routerLink="/">
           Home
         </a>
   
-        <a class="navbar-item" (click)="onSelect('documentation')">
+        <a class="navbar-item" routerLink="/documents">
           Documentation
         </a>
   
@@ -47,8 +47,8 @@
       <div class="navbar-end" *ngIf="!loggedIn; else elseifsignedin">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
+            <a class="button is-primary" routerLink="/register">
+              <strong>Register Your Society</strong>
             </a>
             <a class="button is-light">
               Log in

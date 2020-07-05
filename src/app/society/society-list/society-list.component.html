@@ -1,0 +1,20 @@
+<div class="container is-fluid">
+    <div class="columns" *ngIf="error">
+        <div class="notification">
+            {{error.message}}
+        </div>
+    </div>
+    <div *ngIf="!error">
+        <div class="columns" *ngFor="let society of socities;let i=index">
+            <div class="column is-three-quarters">
+                {{society.name}}
+            </div>
+            <div class="column auto">
+                <button class="button" (click)='onShowClick(i)'>Show</button>
+            </div>
+            <div class="column auto">
+                <button class="button is-info" (click)='onEditClick(i)'>Edit</button>
+            </div>
+        </div>
+    </div>
+</div>

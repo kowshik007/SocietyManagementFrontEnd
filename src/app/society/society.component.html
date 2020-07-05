@@ -1,9 +1,1 @@
-<div class="container is-fluid">
-    <div class="columns">
-        <div class="notification" *ngIf="error">
-            {{error}}
-        </div>
-    </div>
-    <app-create-society (onCreateSocietyEvent)="onCreateSocietyEvent($event)"></app-create-society>
-    <app-society-details *ngFor="let society of socities" [society]="society"></app-society-details>
-</div>
+<router-outlet></router-outlet>
